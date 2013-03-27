@@ -1,6 +1,8 @@
 function colorizeAlpha(canvas, gradient) {
+    'use strict';
+
     var ctx = canvas.getContext('2d'),
-    data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        data = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
     for (var i = 0, l = data.data.length; i < l; i += 4) {
         var alpha = data.data[i + 3] / 255,
